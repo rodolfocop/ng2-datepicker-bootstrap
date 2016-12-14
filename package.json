@@ -2,7 +2,10 @@
   "name": "ng2-datepicker-bootstrap",
   "version": "0.1.0",
   "description": "Datepicker component to angular2",
-  "repository": "https://github.com/rodolfocop/ng2-datepicker-bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodolfocop/ng2-datepicker-bootstrap.git"
+  },
   "author": "@rodolfocop - rodolfocop@gmail.com",
   "scripts": {},
   "private": false,
@@ -36,5 +39,11 @@
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "2.0.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rodolfocop/ng2-datepicker-bootstrap/issues"
+  },
+  "homepage": "https://github.com/rodolfocop/ng2-datepicker-bootstrap#readme",
+  "main": "index.js",
+  "license": "ISC"
 }

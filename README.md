@@ -19,28 +19,17 @@ $ npm install ng2-datepicker-bootstrap --save
 ## Use Example:
 
 ```ts
-import {Component} from '@angular/core';
-import {FORM_DIRECTIVES} from '@angular/forms/index';
-import {DatePicker} from 'ng2-datepicker-bootstrap';
+import {DataPickerModule} from 'ng2-datepicker-bootstrap';
 
-class Test {
-  date: Date;
-}
-
-@Component({
-  template: `
-   <datepicker [(ngModel)]="test.date" [viewFormat]="'DD/MM/YYYY'" model-format="YYYY-MM-DD" init-date="2017-05-12" name="dateInitial"></datepicker>
-  `,
-  directives: [DatePicker, FORM_DIRECTIVES]
+@NgModule({
+    declarations: [...],
+    imports: [
+        //... you others modules
+        DataPickerModule
+    ],
+    providers: [...]
 })
-
-class App {
-  test: Test;
-
-  constructor() {
-    this.test = Test();
-  }
-}
+export class AppModule {}
 ```
 
 Update the system.config
@@ -54,24 +43,19 @@ var packages = {
 }
 ```
 
-## Development
+### Using 
 
-To generate all `*.js`, `*.js.map` and `*.d.ts` files:
-```bash
-$ npm run tsc
-```
-To lint all `*.ts` files:
-```bash
-$ npm run lint
+```html  
+  <datepicker [(ngModel)]="model.firstDate" [viewFormat]="'DD/MM/YYYY'" [modelFormat]="'YYYY-MM-DD'"  [id]="'firstDate'" [label]="'To'"></datapicker>
 ```
 
-## License
+Available options: 
 
-The MIT License
+ * `viewFormat` - Date format to display in the view. (default: `'DD/MM/YYYY'`) 
+ * `modelFormat` - Date format of the calendar. This will be bound to the model as the date's value. (default: `'YYYY-MM-DD'`) 
+ * `id` - Identify your attribute 
+ * `label` -  Label display name
+ * `firstWeekdaySunday` -  Set to `'true'` to set first day of the week in calendar to Sunday instead of Monday.
+ * `opened` - Set to `true` to open the calendar by default
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ ## Questions? Open a Issue!

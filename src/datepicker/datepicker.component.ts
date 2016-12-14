@@ -18,7 +18,7 @@ const DatePickerValueAccessor = {
 @Component({
     moduleId: module.id,
     encapsulation: ViewEncapsulation.None,
-    selector: 'datapicker',
+    selector: 'datepicker',
     templateUrl: 'datepicker.component.html',
     providers: [DatePickerValueAccessor],
     styleUrls: ['./datapicker.component.css']
