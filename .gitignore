@@ -10,7 +10,7 @@
 /src/datepicker/*.js
 # IDEs and editors
 /.idea
-/.vscode
+/*.js
 .project
 .classpath
 *.launch
