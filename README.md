@@ -19,13 +19,15 @@ $ npm install ng2-datepicker-bootstrap --save
 ## Use Example:
 
 ```ts
-import {DataPickerModule} from 'ng2-datepicker-bootstrap';
+import {DatePickerModule} from 'ng2-datepicker-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [...],
     imports: [
         //... you others modules
-        DataPickerModule
+        DatePickerModule,
+        FormsModule
     ],
     providers: [...]
 })
@@ -46,7 +48,7 @@ var packages = {
 ### Using 
 
 ```html  
-  <datepicker [(ngModel)]="model.firstDate" [viewFormat]="'DD/MM/YYYY'" [modelFormat]="'YYYY-MM-DD'"  [id]="'firstDate'" [label]="'To'"></datapicker>
+  <datepicker [(ngModel)]="model.firstDate" [viewFormat]="'DD/MM/YYYY'" [modelFormat]="'YYYY-MM-DD'"  [id]="'firstDate'" [label]="'To'"></datepicker>
 ```
 
 Available options: 

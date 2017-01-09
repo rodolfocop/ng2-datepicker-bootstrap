@@ -16,3 +16,4 @@
 *.launch
 .settings/
 .idea/
+/index.js

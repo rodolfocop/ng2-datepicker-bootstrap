@@ -1,18 +1,18 @@
 <input
-        type="text"
-        autocomplete="off"
-        class="form-control ng-datepicker-input"
-        [required]="required"
-        [hidden]="isStatic"
-        [(ngModel)]="viewValue"
-        (keypress)="atribuirDataModel()"
-        (keyup)="atribuirDataModel()"
-        (blur)="atribuirDataModel()"
-        [name]="name"
-        id="{{id}}Input"
-        pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d"
-        [ngClass]="{'ng-dirty' : dirty, 'invalid-pattern' : ( viewValue && viewValue != '')}"
-        #datePicker>
+  type="text"
+  autocomplete="off"
+  class="form-control ng-datepicker-input"
+  [required]="required"
+  [hidden]="isStatic"
+  [(ngModel)]="viewValue"
+  (keypress)="atribuirDataModel()"
+  (keyup)="atribuirDataModel()"
+  (blur)="atribuirDataModel()"
+  [name]="name"
+  id="{{id}}Input"
+  pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d"
+  [ngClass]="{'ng-dirty' : dirty, 'invalid-pattern' : ( viewValue && viewValue != '')}"
+  #datePicker>
 
 <span *ngIf="required" [class]="'is-required'"
       [ngClass]="{'is-required-datepicker': viewValue != '' && viewValue != null && viewValue }"></span>
@@ -22,60 +22,58 @@
 
 <div class="datepicker-overlay" [ngClass]="{active: isOpened}" (click)="closeDatepicker()"></div>
 <div class="ng-datepicker" [ngClass]="{ static: isStatic , active: isOpened}">
-    <div class="calendar-header">
-        <div class="controls">
-            <div class="cancel">
-                <i class="zmdi zmdi-close" (click)="closeDatepicker()"></i>
-            </div>
-            <div class="left">
-                <i class="fa fa-angle-left prev-year-btn" (click)="prevYear()"></i>
-                <i class="fa fa-angle-left prev-month-btn" (click)="prevMonth()"></i>
-            </div>
-            <div class="center">
-                <div class="mes">{{date.format('MMMM')}}</div>
-                <div class="dia">{{date.format('DD')}}</div>
-                <div class="ano">{{date.year()}}</div>
-            </div>
-            <div class="right">
-                <i class="fa fa-angle-right next-month-btn" (click)="nextMonth()"></i>
-                <i class="fa fa-angle-right next-year-btn" (click)="nextYear()"></i>
-            </div>
-        </div>
+  <div class="calendar-header">
+    <div class="controls">
+      <div class="cancel">
+        <i class="zmdi zmdi-close" (click)="closeDatepicker()"></i>
+      </div>
+      <div class="left">
+        <i class="fa fa-angle-left prev-year-btn" (click)="prevYear()"></i>
+        <i class="fa fa-angle-left prev-month-btn" (click)="prevMonth()"></i>
+      </div>
+      <div class="center">
+        <div class="mes">{{date.format('MMMM')}}</div>
+        <div class="dia">{{date.format('DD')}}</div>
+        <div class="ano">{{date.year()}}</div>
+      </div>
+      <div class="right">
+        <i class="fa fa-angle-right next-month-btn" (click)="nextMonth()"></i>
+        <i class="fa fa-angle-right next-year-btn" (click)="nextYear()"></i>
+      </div>
     </div>
-    <div class="dayofweek">
-        {{date.format('dddd')}}
-    </div>
-    <div class="calendar-body">
-        <div class="day-names">
+  </div>
+  <div class="dayofweek">
+    {{date.format('dddd')}}
+  </div>
+  <div class="calendar-body">
+    <div class="day-names">
         <span *ngFor="let dn of dayNames">
           <span>{{ dn }}</span>
         </span>
-        </div>
-        <div class="calendar">
+    </div>
+    <div class="calendar">
         <span *ngFor="let d of days; let i = index;">
           <span class="day" [ngClass]="{'selected': isSelected(d), 'disabled': isInvalidDate(d)}"
                 (click)="selectDate($event, d)">
             {{ d.day }}
           </span>
         </span>
-        </div>
     </div>
-    <div class="calendar-foot  pull-right">
+  </div>
+  <div class="calendar-foot  pull-right">
 
-        <!--<button type="button" class="btn btn-default"-->
-        <!--(click)="cleanFieldModel()">Limpar-->
-        <!--</button>-->
-        <group-buttons class="pull-right">
-            <button type="button" class="btn btn-default"
-                    (click)="closeDatepicker()">
-                <i class="zmdi zmdi-close"></i>Cancelar
-            </button>
+    <!--<button type="button" class="btn btn-default"-->
+    <!--(click)="cleanFieldModel()">Clear-->
+    <!--</button>-->
+    <group-buttons class="pull-right">
+      <button type="button" class="btn btn-default"
+              (click)="closeDatepicker()">
+        <i class="zmdi zmdi-close"></i>Cancel
+      </button>
 
-            <button type="button" class="btn btn-default"
-                    (click)="setNowDate()">Hoje
-            </button>
-        </group-buttons>
-    </div>
+      <button type="button" class="btn btn-default" (click)="setNowDate()">Today</button>
+    </group-buttons>
+  </div>
 </div>
 
 

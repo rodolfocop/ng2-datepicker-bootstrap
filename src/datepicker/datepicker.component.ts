@@ -11,19 +11,18 @@ const noop = () => {
 };
 const DatePickerValueAccessor = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => DataPickerComponent),
+    useExisting: forwardRef(() => DatePickerComponent),
     multi: true,
 };
 
 @Component({
-    moduleId: module.id,
     encapsulation: ViewEncapsulation.None,
     selector: 'datepicker',
     templateUrl: 'datepicker.component.html',
     providers: [DatePickerValueAccessor],
-    styleUrls: ['./datapicker.component.css']
+    styleUrls: ['./datepicker.component.scss']
 })
-export class DataPickerComponent implements ControlValueAccessor, AfterViewInit {
+export class DatePickerComponent implements ControlValueAccessor, AfterViewInit {
 
     @Input('modelFormat')
     modelFormat: string;
