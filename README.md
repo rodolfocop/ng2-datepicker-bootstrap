@@ -34,17 +34,6 @@ import { FormsModule } from '@angular/forms';
 export class AppModule {}
 ```
 
-Update the system.config
-```
-var map = {
-	....
-	'ng2-datepicker-bootstrap': 'node_modules/ng2-datepicker-bootstrap/dist'
-};
-var packages = {
-	'ng2-datepicker-bootstrap': { main: 'index.js', defaultExtension: 'js' },
-}
-```
-
 ### Using 
 
 ```html  
