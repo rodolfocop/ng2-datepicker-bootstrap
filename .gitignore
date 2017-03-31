@@ -4,16 +4,36 @@
 /dist
 /tmp
 
+*.tgz
+
 # dependencies
 /node_modules
 /bower_components
-/src/datepicker/*.js
+
 # IDEs and editors
 /.idea
-/*.js
-.project
-.classpath
-*.launch
-.settings/
-.idea/
-/index.js
+/.vscode
+
+src/**/*.js
+
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+/src/**/*.js
+/www/
+/src/**/*.js.map

@@ -3,8 +3,8 @@
  */
 
 export interface CalendarDateItem {
-  day:number;
-  month:number;
-  year:number;
-  enabled:boolean;
+  day: number;
+  month: number;
+  year: number;
+  enabled: boolean;
 }

@@ -1,11 +1,11 @@
 # ng2-datepicker-bootstrap
 Datepicker component to angular2
 
-Hello everyone!
-This repository will be added to the datepicker component for use with angular 2.
-I'll try to update it whenever possible.
-I would like to inform you that it was created based on the repository of https://github.com/jkuri/ng2-datepicker, due to being too long without update decided to create this repository and go updating.
+Hi everyone!
 
+A very simple datepicker for Angular. You should use the version 2.x.x for Angular 2.x.x applications and the version 4.x.x for Angular 4.x.x applications.
+
+Note: This component is ready to AoC (Ahead-of-Time) compilation.
 Below the operating instructions.
 
 ## Installation
